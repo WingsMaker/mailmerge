@@ -1,5 +1,7 @@
 # mailmerge ( using your own gmail engine )
 To perform simple mailmerge using googlesheet with macro (written in google app script).
+It support variable message templates as found in the 2nd worksheet.
+You can change to code to increase the maximum of users, currently 100.
 
 Example:
 
