@@ -1,0 +1,52 @@
+function mailmerge() {
+  var max_items = 100;
+  var max_cols = 10;
+  var ss = SpreadsheetApp.getActive();
+  ss.setActiveSheet(ss.getSheetByName('Sheet2'), true);
+  var dtable = ss.getSheetValues(1, 1, max_items, 2);
+  dtable = dtable.filter(function(x){ return x[0] != ""; })
+  var tcnt = dtable.length;
+  var arr_templates = dtable.map(i => i[1]);  
+  max_items = 200;
+  ss.setActiveSheet(ss.getSheetByName('Sheet1'), true);
+  var dtable = ss.getSheetValues(1, 1, max_items, max_cols);
+  dtable = dtable.filter(function(x){ return x[0] != ""; })
+  var arr_subjects = dtable.map(i => i[1]);
+  var arr_mailto = dtable.map(i => i[2]);
+  var arr_names = dtable.map(i => i[3]);
+  var arr_titles = dtable.map(i => i[4]);
+  var arr_from = dtable.map(i => i[5]);
+  var arr_datetime = dtable.map(i => i[6]);
+  var arr_location = dtable.map(i => i[7]);
+  var arr_templ_id = dtable.map(i => i[8]);
+  var mcnt = dtable.length;
+  var j = 0;
+  var k = 0;
+  var txt = "";
+  var dt = "";
+  if ( mcnt > 1 ) {
+    for (var i = 1 ; i < mcnt ; i++) {
+      j = parseInt( arr_templ_id[i] );
+      txt = "";
+      if ( ( arr_mailto[i] != "" ) && (arr_templ_id[i] != "") ) {
+        if ( arr_templ_id[i] <= tcnt ) {          
+          txt = arr_templates[ j ]
+          txt = txt.replaceAll("[Name]", arr_names[i]);
+          txt = txt.replaceAll("[Title]", arr_titles[i]);
+          txt = txt.replaceAll("[Sender]", arr_from[i]);
+          txt = txt.replaceAll("[DateTime]", arr_datetime[i].toString());
+          txt = txt.replaceAll("[Location]", arr_location[i]);
+        }
+        if ( txt != "" ) {
+          MailApp.sendEmail(arr_mailto[i] , arr_subjects[i] , txt);
+          k += 1;
+        }
+      }
+    }
+  }
+  var result = SpreadsheetApp.getUi().alert("Mail Merge completed");
+  if(result === SpreadsheetApp.getUi().Button.OK) {
+    txt = "Total # of items sent = " + k.toString();
+    SpreadsheetApp.getActive().toast(txt);
+  }
+}
