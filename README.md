@@ -80,5 +80,13 @@ Go back to the google sheet. Find the "mailmerge" macro function that you can cr
 All you need to click and this mailmerge macro.
 
 
+The test results shows
 
+![image](https://user-images.githubusercontent.com/32192638/154190578-0d9ed623-cfb1-42c8-ab80-ebc17717d6ab.png)
+
+
+
+
+
+Note that you are sending from your gmail address, you can't use non-gmail to perform mail merge.
 
