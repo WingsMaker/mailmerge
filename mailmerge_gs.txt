@@ -1,5 +1,5 @@
 function mailmerge() {
-  var max_items = 100;
+  var max_items = 100; // maximum limit of 100 emails to be sent, change it accordingly.
   var max_cols = 10;
   var ss = SpreadsheetApp.getActive();
   ss.setActiveSheet(ss.getSheetByName('Sheet2'), true);
