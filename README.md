@@ -1,4 +1,4 @@
-# mailmerge
+# mailmerge ( using your own gmail engine )
 To perform simple mailmerge using googlesheet with macro (written in google app script).
 
 Example:
