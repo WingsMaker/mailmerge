@@ -16,7 +16,7 @@ function mailmerge() {
   var arr_names = dtable.map(i => i[3]);
   var arr_titles = dtable.map(i => i[4]);
   var arr_from = dtable.map(i => i[5]);
-  var arr_datetime = dtable.map(i => i[6]);
+  var arr_datetime = dtable.map(i => i[6]);   // make sure data time column in text format, just a prefix ' on the left
   var arr_location = dtable.map(i => i[7]);
   var arr_templ_id = dtable.map(i => i[8]);
   var mcnt = dtable.length;
