@@ -1,5 +1,12 @@
 # mailmerge
-perform simple mailmerge using googlesheet with google app script
+To perform simple mailmerge using googlesheet with macro (written in google app script).
+
+Example:
+
+![image](https://user-images.githubusercontent.com/32192638/154191271-8fcd843f-9023-4e8b-849e-10d14a1f634a.png)
+
+
+
 
 
 Steps
