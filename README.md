@@ -97,3 +97,6 @@ The test results shows
 
 Note that you are sending from your gmail address, you can't use non-gmail to perform mail merge.
 
+Lazy to hands-on ? make a copy from below
+https://docs.google.com/spreadsheets/d/17ujNIUMpGWJlrUR9vkc5YGnU8ufKNwr6puz09mmLnlo/edit?usp=sharing
+
