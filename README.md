@@ -73,7 +73,7 @@ and paste the 52 lines of code into the app script editor.
 
 
 
-Click the Save icon ( yellow ) and this editor app. 
+Click the Save icon ( yellow ) and closed this editor app. 
 
 Go back to the google sheet. Find the "mailmerge" macro function that you can created.
 
@@ -84,7 +84,7 @@ Go back to the google sheet. Find the "mailmerge" macro function that you can cr
 
 
 
-All you need to click and this mailmerge macro.
+All you need to click and run this mailmerge macro.
 
 
 The test results shows
